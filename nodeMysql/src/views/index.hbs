@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/css/estilos.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+<body>
+    
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/inicio">
+                    <div class="contenedor-logo-marvel">
+                        <img src="css/img/logo_marvel.png" alt="Logotipo de MARVEL">
+                    </div>
+                </a>
+                <nav class="navegacion">
+                    <a href="/catalogo">Catalogo</a>
+                    <a href="/personajes">Personajes</a>
+                    <a href="/register">Registrate</a>
+                    <div class="boton-iniciar-sesion">
+                        <a href="/index">INICIAR SESION </a>
+                    </div>
+                    
+                    
+                </nav>
+            </div>
+            <h1>INICIAR SESION</h1>
+        </div> <!-- contenedor -->
+    </header>
+
+    
+  <content>
+
+<div class="loginForm">
+    <div class="login">
+        <h1> Ingresar</h1>
+    </div>
+    
+    <div class="inputForm">  
+    <form action="/login" method="post">
+        <div class="username">
+            <div class="userForm" >
+                <label for="email"> CORREO</label>
+                <input type="email" class="tam" id="email" name="email" required placeholder="CORREO"><br>
+            </div>
+        
+            
+        <div class="pass">
+            <div class="passForm">    
+                <label for="password">CONTRASEÑA</label>
+                <input type="password" class="tam" id="password" name="password" required placeholder="CONTRASEÑA"><br>
+            </div> 
+        </div>
+
+        <button type="submit" id="loginBtn">Iniciar Sesión</button>
+    </div>    
+    </form>
+
+    <!-- Hipervínculo para ir al formulario de registro -->
+    
+        <div class="forgot">
+            <p>¿No tienes una cuenta? <a href="/register" id="signUp">Regístrate aquí</a>.</p>
+        </div>
+
+        <div class="forgot"></div>
+            <p>¿Olvidaste tu contraseña? <a href="/recover-password" id="signUp">Recupérala aquí</a>.</p>
+        </div>
+    
+
+</div>
+
+</content>
+</body>
+</html>

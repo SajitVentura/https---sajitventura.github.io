@@ -1,0 +1,169 @@
+<!-- catalogo.hbs -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Personajes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .personaje {
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            width: 200px;
+            background-color: rgba(251, 247, 247, 0.388);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 5px 15px black;
+    
+        }
+
+        .personaje img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .personaje h2 {
+    color: rgb(10, 10, 10);
+    margin-top: 10px;
+}
+
+.personaje a {
+    color: rgb(19, 19, 19);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+
+        .search-bar {
+            margin: 20px 0;
+            background-color: rgba(251, 247, 247, 0.388);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgb(49, 49, 49);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 2px 5px 15px black;
+        }
+
+        .search-bar label {
+    font-size: 20px; /* Ajustar el tamaño de la letra en la etiqueta "Buscar" */
+    display: block;
+    text-align: center; /* Centrar el texto dentro de la etiqueta "Buscar" */
+    margin-right: 30px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Ajustar el diseño del formulario a una columna */
+    margin-left: auto;
+}
+
+button {
+    background-color: rgb(19, 19, 19);
+    color: rgb(247, 244, 244);
+    font-size: 18px;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px; /* Agregar un margen superior para separar el botón del campo de entrada */
+}
+
+
+button:active {
+    background-color: rgb(48, 47, 48);
+}
+
+.personaje h2 {
+    color: rgb(10, 10, 10);
+    margin-top: 10px;
+    font-size: 18px; /* Ajusta el tamaño de la letra según tus preferencias */
+}
+
+.personaje .ver-mas-btn {
+    background-color: rgb(19, 19, 19);
+    color: rgb(247, 244, 244);
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.personaje .ver-mas-btn:hover {
+    background-color: rgb(48, 47, 48);
+}
+
+
+    </style>
+</head>
+<body>
+    
+<header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/inicio">
+                    <div class="contenedor-logo-marvel">
+                        <img src="css/img/logo_marvel.png" alt="Logotipo de MARVEL">
+                    </div>
+                </a>
+                <nav class="navegacion">
+                    <a href="/catalogo">Catalogo</a>
+                    <a href="/personajes">Personajes</a>
+                    <div class="boton-iniciar-sesion">
+                        <a href="/index">INICIAR SESION </a>
+                    </div>
+                    
+                    
+                </nav>
+            </div>
+            <h1>C A T A L O G O</h1>
+        </div> <!-- contenedor -->
+    </header>
+
+
+    <content>
+        <div class="search-bar">
+            <form action="/catalogo" method="get">
+                <label for="charname">Buscar:</label>
+                <input type="text" id="charname" name="charname" placeholder="Nombre del personaje...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <div class="catalogo">
+            {{#each catalogo}}
+                <div class="personaje">
+                    <img src="{{thumbnail}}" alt="{{name}}">
+                    <h2>{{name}}</h2>
+                    <form action="/agregar-al-carrito" method="post">
+                    <input type="hidden" name="name" value="{{name}}">
+                    <input type="hidden" name="thumbnail" value="{{thumbnail}}">
+                    <button type="submit">Agregar al Carrito</button>
+                    </form>
+                    <a href="{{url}}" target="_blank" class="ver-mas-btn">Ver más</a>
+                </div>
+            {{/each}}
+        </div>
+    </content>
+</body>
+</html>

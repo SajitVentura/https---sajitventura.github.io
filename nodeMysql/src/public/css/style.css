@@ -1,0 +1,350 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+html{
+    font-size: 62.5%; /** Reset para REMS**/
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+    
+/**Globales **/
+img {
+    max-width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;     
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.8rem;
+}
+h3{
+    font-size: 3.4rem;
+}
+h4{
+    font-size: 3rem;
+}
+
+h5{
+    font-size: 2rem;
+
+}
+
+/** Utilidades **/
+.secccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300{
+    font-weight: 300;
+}
+.centrar-texto{
+    text-align: center;
+}
+.d-block{
+    display:block !important;
+}
+
+/**Botones**/
+.boton{
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+}
+.boton-rojo{
+    background-color: #f70a0a;
+    display: inline-flex;
+}
+.boton-amarillo{
+    background-color: #ffea05;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Header*/
+.site-header.inicio{
+    background-image: url(../css/img/marvel.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh ;
+    min-height: 60rem;
+}
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+}
+.contenido-header h1{
+    color: #ede8e8;
+    padding-bottom: 2rem;
+    max-width: 70rem;
+    line-height: 4rem;
+    background-color: rgb(247, 10, 10,0.5); /* Cambia el último valor (0.5) para ajustar la transparencia */
+    
+}
+.barra {
+    background-color:#f70a0a ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding-top: 2.5rem;
+}
+
+
+.contenedor-logo-marvel {
+    width: 200px; /* Ancho deseado */
+    height: 150px; /* Alto deseado */
+    overflow: hidden; /* Recortar el contenido que exceda las dimensiones del contenedor */
+  }
+  
+  .contenedor-logo-marvel img {
+    width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    height: auto; /* Mantener la proporción original de la imagen */
+    display: block; /* Eliminar espacios en blanco debajo de la imagen */
+    margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+  }
+  
+
+/** Navegación **/
+.navegacion{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.navegacion a{
+    color: #ffffff; 
+    text-decoration: none; /*Para quitar el balanco de abajo*/
+    font-size: 2.3rem;
+    margin-right: 2.5rem;
+    
+}
+.navegacion a:hover{
+    color: #f1c30a;
+}
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+.boton-iniciar-sesion {
+    background-color: #080000;
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 5px; /* Establece el radio de los bordes para hacerlos redondeados */
+    padding: 10px 20px; /* Ajusta el espaciado interno del botón según sea necesario */
+    font-weight: bold; /* Hace que el texto del botón esté en negritas */
+    text-decoration: none; /* Elimina el subrayado predeterminado si es un enlace */
+    display: inline-block; /* Para que el botón se comporte como un bloque pero mantenga el tamaño del contenido */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-left: 2rem;
+  }
+  
+  
+/** iconos nosotros**/
+.contenedor-seccion{
+;}
+
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+.icono {
+    flex-basis: calc(33.3%-1rem);
+    text-align: center;
+}
+.icono h3{
+    text-transform: uppercase;
+}
+
+.icono img{
+    width: 120px;
+    height: fit-content;
+}
+
+/**anuncios**/
+.contenedor-anuncios{
+    display: flex;
+}
+.anuncio{
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid #b5b5b5;
+    background-color: #f5f5f5;
+}
+.contenido-anuncio{
+    padding: 2rem;
+}
+.contenido-anuncio h3 ,.contenido-anuncio{
+    margin: 0;
+}
+.precio{
+    color: #f70a0a;
+    font-weight: 700;
+}
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    text-align: center;
+}
+.iconos-caracteristicas li{
+flex: 1;
+display: flex;
+}
+
+.iconos-caracteristicas li img{
+    margin-right: 2rem;
+}
+
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;}
+
+    /**PERSONAJES/contacto **/
+.imagen-personajes{
+    background-image: url(../css/img/personajes.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto{
+    flex: 1;
+    color: #ffffff;
+}
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+
+/**SECCION INFERIOR**/
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+.seccion-inferior .blog{
+    flex-basis: 60%;
+}
+.seccion-inferior .testimoniales{
+flex-basis: calc(40% - 2rem);
+}
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+.texto-entrada a{
+    color: #000000;
+    text-decoration: none;
+}
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.2;
+}
+.texto-entrada h4::after{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem ;
+    background-color: #f70a0a;
+    margin-top: 1rem;
+}
+.texto-entrada span{
+    color: #E08709;
+}
+
+/**testimoniales**/
+.testimonial{
+    background-color: #f70a0a;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 2rem;
+    line-height: 4rem;
+}
+.testimonial p{
+    text-align: end;
+}
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../css/img/comilla.svg);
+    width: 4rem;
+    height: 4rem;  
+    position: absolute;  
+    top: 0;
+    left: -2rem;
+}
+.testimonial blockquote{
+position: relative;
+padding-left: 5rem;
+font-weight: 300;
+}
+
+.site-footer{
+    background-color: #f70a0a;
+    margin: 0;
+    
+}
+.contenedor-footer{
+    padding:3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+/**personajes**/
+
+.contenedor-personajes{
+    display: flex;
+}
+
+.anuncio-p{
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid #b5b5b5;
+    background-color: #f5f5f5;
+}
+.contenido-anuncio-p{
+    padding: 2rem;
+}
+.contenido-anuncio h3 ,.contenido-anuncio{
+    margin: 0;
+}
+
+.contenedor-personajes img{
+    height: 350px;
+    width: auto;
+}
+.contenedor-personajes h3{
+    color: #f70a0a;
+}

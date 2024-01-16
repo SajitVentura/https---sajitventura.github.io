@@ -1,0 +1,33 @@
+<!-- carrito.hbs -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+
+    <header class="site-header inicio">
+        <!-- ... tu código de encabezado ... -->
+    </header>
+
+    <content>
+        <div class="carrito">
+            <h1>Carrito de Compras</h1>
+            {{#if carrito.length}}
+                {{#each carrito}}
+                    <div class="item-carrito">
+                        <h2>{{nombre_personaje}}</h2>
+                        <img src="{{imagen_personaje}}" alt="{{nombre_personaje}}">
+                    </div>
+                {{/each}}
+            {{else}}
+                <p>El carrito está vacío.</p>
+            {{/if}}
+        </div>
+    </content>
+
+</body>
+</html>

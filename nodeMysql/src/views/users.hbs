@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVEL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head><!-- users.hbs -->
+
+<body>
+<header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/inicio">
+                    <div class="contenedor-logo-marvel">
+                        <img src="css/img/logo_marvel.png" alt="Logotipo de MARVEL">
+                    </div>
+                </a>
+                <nav class="navegacion">
+                    <a href="/catalogo">Catalogo</a>
+                    <a href="/personajes">Personajes</a>
+                    <div class="boton-iniciar-sesion">
+                        <a href="/index">INICIAR SESION </a>
+                    </div>
+                    
+                    
+                </nav>
+            </div>
+            <h1>USUARIOS ADMIN </h1>
+        </div> <!-- contenedor -->
+    </header>
+
+
+<h1 id="title-table">{{title}}</h1>
+<a href="/register" class="btn-registrar">Registrar Nuevo Usuario</a>
+<table id="table-users">
+  <thead>
+    <th>nombre</th><th>correo</th><th>acciones</th>
+  </thead>
+  {{#each list}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+      <td>{{role}}</td>
+      <td>
+        <!-- Botón Borrar -->
+        <form action="/delete-user" method="post">
+          <input type="hidden" name="userId" value="{{id}}">
+          <button type="submit">Borrar</button>
+        </form>
+        <form action="/update-user-by-admin" method="post">
+          <input type="hidden" name="email" value="{{email}}">
+          <button type="submit">Editar Usuario</button>
+        </form>
+      </td>
+    </tr>
+  {{/each}}
+</table>
+</body>

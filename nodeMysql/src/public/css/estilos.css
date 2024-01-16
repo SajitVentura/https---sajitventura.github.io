@@ -1,0 +1,361 @@
+#title-table{
+    text-align: center;
+}
+
+#table-users{
+  width: 80%;    
+  margin: 20px auto;
+  border: 1px solid black;
+  background-color:lightgray;
+}
+
+#table-users td{
+	border:2px solid black;
+    text-align: center;
+}
+
+#table-users th{
+  color:blue;
+  font-size: 1.5em;
+  font-style: italic;  
+}
+
+#table-users th{
+  height: 30px;
+  }
+  
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
+    height: 100vh;
+    background-image: url(marvel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+    
+}
+
+.myList {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 250px;
+}
+
+.list li {
+    display: inline-flex;
+    margin-right: 80px;
+    list-style: none;
+}
+
+.list li a {
+    font-size: 18px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#signIn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: whitesmoke;
+    background-color: rgb(21, 21, 21);
+}
+
+content {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+}
+
+.loginForm {
+    display: grid;
+    grid-template-columns: 1/2;
+    grid-template-rows: 100px 200px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(49, 49, 49);
+    width: 350px;
+    height: 350px;
+    background-color: rgba(251, 247, 247, 0.388);
+    backdrop-filter: blur(20px);
+    box-shadow: 2px 5px 15px black;
+}
+
+.login {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(10, 10, 10);
+}
+
+.inputForm {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.userForm,
+.passForm {
+    background-color: transparent;
+    padding-bottom: 3px;
+    
+}
+
+.tam{
+    width: 250px;
+}
+
+#name,
+#email,
+#password,
+#confirmPassword,
+#secQuestion,
+#secAnswer {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    margin-left: 5px;
+    letter-spacing: 2px;
+}
+
+
+
+#forgotText {
+    color: rgb(20, 20, 20);
+    font-size: 15px;
+}
+
+#loginBtn {
+    background-color: rgb(19, 19, 19);
+    color: rgb(247, 244, 244);
+    font-size: 20px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    width: 80%; /* Se añadió para centrar el botón */
+}
+
+#loginBtn:active {
+    background-color: rgb(48, 47, 48);
+}
+
+
+/*************CATALOGO************/
+.search-bar {
+    background-color: rgba(251, 247, 247, 0.388);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 5px 15px black;
+}
+
+.search-bar label {
+    font-size: 20px; /* Ajustar el tamaño de la letra en la etiqueta "Buscar" */
+    display: block;
+    text-align: center; /* Centrar el texto dentro de la etiqueta "Buscar" */
+    margin-right: 30px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Ajustar el diseño del formulario a una columna */
+    margin-left: auto;
+}
+
+
+button {
+    background-color: rgb(19, 19, 19);
+    color: rgb(247, 244, 244);
+    font-size: 18px;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px; /* Agregar un margen superior para separar el botón del campo de entrada */
+}
+
+
+button:active {
+    background-color: rgb(48, 47, 48);
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.personaje {
+    background-color: rgba(251, 247, 247, 0.388);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 5px 15px black;
+    text-align: center;
+}
+
+.personaje img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.personaje h2 {
+    color: rgb(10, 10, 10);
+    margin-top: 10px;
+}
+
+.personaje a {
+    color: rgb(19, 19, 19);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.personaje h2 {
+    color: rgb(10, 10, 10);
+    margin-top: 10px;
+    font-size: 18px; /* Ajusta el tamaño de la letra según tus preferencias */
+}
+
+.personaje .ver-mas-btn {
+    background-color: rgb(19, 19, 19);
+    color: rgb(247, 244, 244);
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.personaje .ver-mas-btn:hover {
+    background-color: rgb(48, 47, 48);
+}
+
+
+/****users******/
+
+#title-table {
+    text-align: center;
+    font-size: 24px; /* Ajusta el tamaño de la letra según tus preferencias */
+    color: #333; /* Ajusta el color del texto según tus preferencias */
+}
+
+.btn-registrar {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(19, 19, 19);
+    color: rgb(247, 244, 244);
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn-registrar:hover {
+    background-color: rgb(48, 47, 48);
+}
+
+#table-users {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+#table-users th,
+#table-users td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+#table-users th {
+    color: blue;
+    font-size: 18px;
+    font-style: italic;
+}
+
+form {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+button {
+    background-color: rgb(19, 19, 19);
+    color: rgb(247, 244, 244);
+    font-size: 14px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(48, 47, 48);
+}
+
+/****error404*****/
+
+/* Estilos para el contenedor de errores */
+/* Estilos para el contenedor de errores */
+.error_gral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Esto asegura que ocupe el 100% de la altura de la ventana */
+    text-align: center;
+}
+
+/* Estilos para el cuadro contenedor */
+.error_gral .container {
+    background-color: rgba(9, 8, 8, 0.95); /* Fondo rojo con transparencia */
+    padding: 20px; /* Ajusta el espacio interno según tus preferencias */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Estilos para el título */
+.error_gral .titError404 {
+    font-size: 36px;
+    color: #fff; /* Color del texto en el título */
+    margin-bottom: 10px;
+}
+
+/* Estilos para la descripción */
+.error_gral .error404 {
+    font-size: 18px;
+    color: #fff; /* Color del texto en la descripción */
+}
+
+
+
+
+
+
+
+
+
+
+
+
